@@ -65,6 +65,10 @@ To handle this, Team 4 has built the "MongoDBar" application. It allows for IOT-
 * Confirm output logs that it is writing readings every ~30 seconds
 * You should see 4 containers running representing a MQTT broker and 3 simulated IOT liquor pouring sensors
 
+![](../Screenshots/01.png)
+![](../Screenshots/02.png)
+![](../Screenshots/03.png)
+
 ## Website
 * Ensure hosting is enabled
 * Change the App ID in `sdjgsdjgkldsgkljg`

@@ -98,3 +98,6 @@ public class BottleReadingTemp : RealmObject
 
 ## Data flow
 ![](UML.png)
+
+## Screenshots
+![](../Screenshots/04.png)

@@ -32,6 +32,7 @@ To handle this, Team 4 has built the "MongoDBar" application. It allows for IOT-
 * Create the `mongodbar.pours` Time Series Collection:
 
   `use mongodbar`
+  
   `db.createCollection("pours",
      {
        timeseries: {

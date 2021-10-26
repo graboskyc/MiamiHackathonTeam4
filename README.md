@@ -28,7 +28,7 @@ put swim lane diagram here
 
 * MongoDB Atlas Account
 * IP Whitelist configured for API access
-* Some knowledage of Realm and Charts
+* Some knowledge of Realm and Charts
 
 
 ## Getting Started

@@ -1,11 +1,19 @@
-# Miami Hackathon Team4
+# Miami Hackathon Team4 - MongoDBar
 
-_A simple (and fun!) way to look at an IOT use case._
+![](Assets/header.png)
+**MongoDBar**: _A simple (and fun!) way to look at an IOT use case._
 
 # Background
 The MongoDB Enterprise SA team would like to attend their next QBR in Aruba. However Mark needs to accurately account for liquor consumption during the trip.
 
 To handle this, Team 4 has built the "MongoDBar" application. It allows for IOT-enabled liquor bottles to accurately record number of shots poured over time for each bottle in the bar.
+
+# Participants
+* Matt Davis - Data modeling and mgenerate
+* Chris Grabosky - Realm Sync, Readme
+* Robbert Kauffman - Search, Charts, Web UI
+* Sahil Kedar - Data modeling and Window Functions
+* Peter Kim - Triggers and Charts
 
 # Components
 * MongoDB **Atlas** for data retention

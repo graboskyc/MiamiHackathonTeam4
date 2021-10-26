@@ -38,7 +38,7 @@ namespace Generator
 
                 while (true)
                 {
-                    if(!firstRun) {
+                    if(firstRun) {
                         clientId = (Int32.Parse(clientId) + 3).ToString();
                         firstRun = false;
                     }
@@ -64,7 +64,10 @@ namespace Generator
 
             while (remaining > pour)
             {
-                Console.WriteLine("Pouring " + pour.ToString() + " with " + remaining.ToString() + " remaining on bottle " + clientId);
+                Random random = new Random();
+                int delay = random.Next(5000, 65000);
+
+                Console.WriteLine("Pouring " + pour.ToString() + " with " + remaining.ToString() + " remaining on bottle " + clientId + " then sleeping " + delay + "ms");
                 remaining = remaining - pour;
                 string payload = name + "," + pour.ToString() + "," + remaining.ToString();
                 Console.WriteLine("Sending message...");
@@ -75,9 +78,7 @@ namespace Generator
 
                 await mqttClient.PublishAsync(message, CancellationToken.None);
 
-                Random random = new Random();
-                int delay = random.Next(15, 65);
-                await Task.Delay(delay*1000);
+                await Task.Delay(delay);
             }
 
         }

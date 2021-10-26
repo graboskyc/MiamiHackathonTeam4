@@ -5,5 +5,15 @@
     },
   "pourTime":{"$date": {"min":"2021-10-01T00:00:00.001Z","max":"2021-10-29T05:00:00.001Z"}},
   "pourOunces":{"$number":{"min":1,"max":3}},
-  "ouncesRemaing":{"$number":{"min":3,"max":50}}
+  "ouncesRemaing":{"$number":{"min":3,"max":50}},
+  "location":{"$choose":{"from":[
+     {"barName":"La Oficina Aruba","geo":[-70.0308962877906,12.552755269852392]},
+     {"barName":"Umbrella Lounge Aruba","geo":[-70.03611762743385,12.518236470428343]},
+     {"barName":"Surfside Beach Bar","geo":[-70.02957603058167,12.507093227052895]},
+     {"barName":"Charlie's Bar and Restaurant","geo":[-69.90661873115269,12.432652785948973]},
+     {"barName":"Tamarijn Aruba All Inclusive Resort","geo":[-70.05552521935915,12.534232423728177]},
+     {"barName":"Ruba Reggae","geo":[-70.04087739580321,12.520287610840983]},
+     {"barName":"Costa Linda Beach Resort","geo":[70.05951025535711,12.54331575075141]},
+     {"barName":"Mangel Halto Bar","geo":[-69.9690695327378,12.46465523192883]}
+     ]}}
 }

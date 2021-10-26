@@ -26,25 +26,26 @@ To handle this, Team 4 has built the "MongoDBar" application. It allows for IOT-
 * Atlas Cluster Deployed (named Team4)
 * You have access to a server running Linux and Docker with this repo cloned onto it
 * Charts enabled
+* `mgeneratejs` is installed
 
 ## Atlas 
-* import lsdjgkljsdklglksdgjlksdgjklsg into `mongodbar.inventory` and `mongodbbar.pours`
-* Create the `mongodbar.pours` Time Series Collection:
 
-  `use mongodbar`
+* using Compass or `mongoimport` to insert `Data/inventory.json` into `mongodbar.inventory`
+* Create the `mongodbar.pours` Time Series Collection:
+```
+  use mongodbar
   
-  `db.createCollection("pours",
+  db.createCollection("pours",
      {
        timeseries: {
          timeField: "pourTime",
          metaField : "bottle"
        }
      }
-   )`
-
+   )
+   ```
 * Run mgenerate.js to generate the initial data in 'mongodbbar.pours':
-
-  `mgenerate.js iot.json -100 | mongoimport --uri "mongodb+srv://user:pwd@atlas_cluster/mongodbar" --collection pours`
+`mgenerate.js Data/iot.json -100 | mongoimport --uri "mongodb+srv://user:pwd@atlas_cluster/mongodbar" --collection pours`
 
 ## Realm
 * Install the Realm-CLI

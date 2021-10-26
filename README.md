@@ -129,10 +129,10 @@ To handle this, Team 4 has built the "MongoDBar" application. It allows for IOT-
     * Select the `mongodbar` service
       * Select the `autocomplete` webhook
         * Click on the `Settings` tab and scroll down to the `Webhook URL` and copy it
-        * Open the file `TODO/autocomplete.js` and edit line 20 to use the URL that was copied
+        * Open the file `RealmExport/hosting/files/js/autocomplete.js` and edit line 20 to use the URL that was copied
       * Select the `getFieldValues` function
         * Click on the `Settings` tab and scroll down to the `Webhook URL` and copy it
-        * Open the file `TODO/charts.js` and edit line 4 to use the URL that was copied, and add `?filterField=";` to the end of the line so that it reads `...incoming_webhook/getFieldValues?filterField=";`
+        * Open the file `RealmExport/hosting/files/js/charts.js` and edit line 4 to use the URL that was copied, and add `?filterField=";` to the end of the line so that it reads `...incoming_webhook/getFieldValues?filterField=";`
 * Import the realm app again to the same App ID and overwrite any existing functions
 * Go back to the Realm App and navigate to `Hosting`
   * Copy the listed URL and open it in your browser to view the dashboard / website

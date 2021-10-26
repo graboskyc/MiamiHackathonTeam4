@@ -34,7 +34,7 @@ To handle this, Team 4 has built the "MongoDBar" application. It allows for IOT-
 * Atlas Cluster Deployed (named Team4)
 * You have access to a server running Linux and Docker with this repo cloned onto it
 * Charts enabled
-* `mgeneratejs` is installed
+* `mgeneratejs` is installed - instructions here:  https://github.com/rueckstiess/mgeneratejs
 
 ## Atlas 
 

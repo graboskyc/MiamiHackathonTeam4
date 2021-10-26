@@ -98,26 +98,6 @@ To handle this, Team 4 has built the "MongoDBar" application. It allows for IOT-
 }
 ```
 
-**default**
-```
-{
-  "mappings": {
-    "dynamic": false,
-    "fields": {
-      "Brand Label Name": {
-        "type": "string"
-      },
-      "License Class Description": {
-        "type": "string"
-      },
-      "Product Description": {
-        "type": "string"
-      }
-    }
-  }
-}
-```
-
 ## Set up Charts
 * Enable charts for your project
 * From within the Charts UI, press the green down arrow next to `Add Dashboard` and choose `Import Dashboard`

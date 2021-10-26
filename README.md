@@ -18,6 +18,7 @@ To handle this, Team 4 has built the "MongoDBar" application. It allows for IOT-
 # Components
 * MongoDB **Atlas** for data retention
 * MongoDB 5.0 **Time Series Collections** for measurements
+* MongoDB `$setWindowFields`
 * MongoDB **Realm** to allow the bottles to write offline-first readings and sync to Atlas
 * Realm App Services **Triggers** to handle alerting, data movement, and inventory control
 * MongoDB **Charts** for reporting

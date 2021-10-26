@@ -13,7 +13,9 @@ A simple (and fun!) way to look at an IOT use case.
 
 ### Getting Started
 
-After you configure your Atlas account set up your database by downloading drinks.json and put them into a database called 'mongodbar' and collection called 'inventory'.  Then add your IOT data using IOT.json into the database called 'mongodbar' and collection called 'iot'......
+After you configure your Atlas account set up your database by downloading inventory.json and put them into a database called 'mongodbar' and collection called 'inventory'.  Then add your IOT data using pours.json into the database called 'mongodbar' and collection called 'pours'......
+
+ACTION AND DELETE : upload inventory.json and pours.json
 
 
 ### Set up Search

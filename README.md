@@ -16,29 +16,46 @@ To handle this, Team 4 has built the "MongoDBar" application. It allows for IOT-
 * HTML5/CSS/JS dashboard to allow for searching liquor inventory with **Atlas Search**
 * **Realm Hosting** to store the dashboards
 
-# Data
-## Data models
-insert here
-
-## Data flow
-put swim lane diagram here
+# Data Models and Data Flow
+[See details here](Assets/DataModel.md)
 
 # Set up
 ## Prerequisites
 
 * MongoDB Atlas Account
-* IP Whitelist configured for API access
-* Some knowledge of Realm and Charts
+* Atlas Cluster Deployed (named Team4)
+* You have access to a server running Linux and Docker with this repo cloned onto it
+* Charts enabled
 
+## Atlas 
+* import lsdjgkljsdklglksdgjlksdgjklsg into `mongodbar.inventory` and `mongodbbar.pours`
 
-## Getting Started
+## Realm
+* Install the Realm-CLI
+* Generate a Realm-CLI API Key
+* Do a Realm-CLI import on the `RealmExport` directory (note that if cluster name is not `Team4` you need to edit `RealmExport/data_sources/mongodb-atlas/config.json` and change `config.clusterName`)
+* This will create a new realm app
+* Confirm that hosting is enabled in Realm portal
+* Confirm API key authentication is enabled. 
+* Generate a authentication API key and save it for use in the next section
+* Confirm sync is running
 
-After you configure your Atlas account set up your database by downloading inventory.json and put them into a database called 'mongodbar' and collection called 'inventory'.  Then add your IOT data using pours.json into the database called 'mongodbar' and collection called 'pours'......
+## Containers
+* Copy `sample.env` in both the `Broker` and `Generator` directories to `.env` respectively 
+* Edit each file and fill in the Realm API key, Realm App ID in the Broker and the IP address of the machine running Docker in the Generator
+* Run the `build.sh` script in the Broker first and check log output to confirm it connected
+* Once successfully running `build.sh` in the Generator directory
+* Confirm output logs that it is writing readings every ~30 seconds
+* You should see 4 containers running representing a MQTT broker and 3 simulated IOT liquor pouring sensors
 
-ACTION AND DELETE : upload inventory.json and pours.json
+## Website
+* Ensure hosting is enabled
+* Change the App ID in `sdjgsdjgkldsgkljg`
+* Upload the `sdkjklsdjkljsgdkl` folder to Realm Hosting
 
+## Search
 
-### Set up Search
+dfjhkldfjhlkdfhkljfdhkl
 
 (
 You need a search index for numerous reasons:
@@ -48,12 +65,6 @@ You need a search index for numerous reasons:
 ).....
 
 
-### Set up Trigger
+## Set up Charts
 
-.......
-
-
-### Set up Charts
-
-
-.......
+dfdfkhjdlfkhjkldfjh

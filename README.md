@@ -9,16 +9,29 @@ A simple (and fun!) way to look at an IOT use case.
 * MongoDB Atlas Account
 * IP Whitelist configured for API access
 * Some knowledage of Realm and Charts
-* 
+
+
 ### Getting Started
 
-After you configure your Atlas account set up your database by downloading drinks.json and put them into a database called 'mongodbar' and collection called 'inventory'.
+After you configure your Atlas account set up your database by downloading drinks.json and put them into a database called 'mongodbar' and collection called 'inventory'.  Then add your IOT data using IOT.json into the database called 'mongodbar' and collection called 'iot'......
 
 
+### Set up Search
 
 (
 You need a search index for numerous reasons:
 * exact names/spelling of beverages may not be known. 
 * the bottle info was brought in in ALL CAPS.  Making typical searching cumbersome and error prone.  
 
-)
+).....
+
+
+### Set up Trigger
+
+.......
+
+
+### Set up Charts
+
+
+.......

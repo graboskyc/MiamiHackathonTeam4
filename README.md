@@ -73,9 +73,11 @@ To handle this, Team 4 has built the "MongoDBar" application. It allows for IOT-
 * Confirm output logs that it is writing readings every ~30 seconds
 * You should see 4 containers running representing a MQTT broker and 3 simulated IOT liquor pouring sensors
 
-![](../Screenshots/01.png)
-![](../Screenshots/02.png)
-![](../Screenshots/03.png)
+![](Screenshots/01.png)
+
+![](Screenshots/02.png)
+
+![](Screenshots/03.png)
 
 ## Website
 * Ensure hosting is enabled
@@ -84,15 +86,42 @@ To handle this, Team 4 has built the "MongoDBar" application. It allows for IOT-
 
 ## Search
 
-dfjhkldfjhlkdfhkljfdhkl
+* Create the following indexes in Atlas:
 
-(
-You need a search index for numerous reasons:
-* exact names/spelling of beverages may not be known. 
-* the bottle info was brought in in ALL CAPS.  Making typical searching cumbersome and error prone.  
+**autocomplete**
 
-).....
+```
+{
+  "mappings": {
+    "dynamic": false,
+    "fields": {
+      "Brand Label Name": {
+        "type": "autocomplete"
+      }
+    }
+  }
+}
+```
 
+**default**
+```
+{
+  "mappings": {
+    "dynamic": false,
+    "fields": {
+      "Brand Label Name": {
+        "type": "string"
+      },
+      "License Class Description": {
+        "type": "string"
+      },
+      "Product Description": {
+        "type": "string"
+      }
+    }
+  }
+}
+```
 
 ## Set up Charts
 * Enable charts for your project

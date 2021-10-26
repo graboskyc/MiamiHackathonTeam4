@@ -30,6 +30,7 @@ To handle this, Team 4 has built the "MongoDBar" application. It allows for IOT-
 ## Atlas 
 * import lsdjgkljsdklglksdgjlksdgjklsg into `mongodbar.inventory` and `mongodbbar.pours`
 * Run mgenerate.js to generate the initial data in 'mongodbbar.pours':
+  'mgenerate.js iot.json -100 | mongoimport --uri "mongodb+srv://user:pwd@atlas_cluster/mongodbar" --collection pours
 
 ## Realm
 * Install the Realm-CLI

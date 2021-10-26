@@ -21,7 +21,7 @@ To handle this, Team 4 has built the "MongoDBar" application. It allows for IOT-
 * MongoDB `$setWindowFields`
 * MongoDB **Realm** to allow the bottles to write offline-first readings and sync to Atlas
 * Realm App Services **Triggers** to handle alerting, data movement, and inventory control
-* * Realm App Services **Webhooks** to power the UI
+* Realm App Services **Webhooks** to power the UI
 * MongoDB **Charts** for reporting
 * HTML5/CSS/JS dashboard to allow for searching liquor inventory with **Atlas Search**
 * **Realm Hosting** to store the dashboards
@@ -119,3 +119,5 @@ To handle this, Team 4 has built the "MongoDBar" application. It allows for IOT-
 * Go back to the Realm App and navigate to `Hosting`
   * Copy the listed URL and open it in your browser to view the dashboard / website
 * All done!
+
+![](Screenshots/05.png)

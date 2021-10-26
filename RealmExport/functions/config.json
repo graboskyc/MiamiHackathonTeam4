@@ -1,1 +1,11 @@
-[]
+[
+    {
+        "name": "createPourEvent",
+        "private": true
+    },
+    {
+        "name": "runSearchComparison",
+        "private": false,
+        "run_as_system": true
+    }
+]

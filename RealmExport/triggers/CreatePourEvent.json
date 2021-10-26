@@ -1,0 +1,26 @@
+{
+    "id": "61784377a892ccf5d91046e4",
+    "name": "CreatePourEvent",
+    "type": "DATABASE",
+    "config": {
+        "operation_types": [
+            "INSERT"
+        ],
+        "database": "mongodbar",
+        "collection": "BottleReadingTemp",
+        "service_name": "mongodb-atlas",
+        "match": {},
+        "project": {},
+        "full_document": false,
+        "full_document_before_change": false,
+        "unordered": false
+    },
+    "disabled": false,
+    "event_processors": {
+        "FUNCTION": {
+            "config": {
+                "function_name": "createPourEvent"
+            }
+        }
+    }
+}

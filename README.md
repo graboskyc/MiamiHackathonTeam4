@@ -79,11 +79,6 @@ To handle this, Team 4 has built the "MongoDBar" application. It allows for IOT-
 
 ![](Screenshots/03.png)
 
-## Website
-* Ensure hosting is enabled
-* Change the App ID in `sdjgsdjgkldsgkljg`
-* Upload the `sdkjklsdjkljsgdkl` folder to Realm Hosting
-
 ## Search
 
 * Create the following indexes in Atlas:
@@ -127,3 +122,18 @@ To handle this, Team 4 has built the "MongoDBar" application. It allows for IOT-
 * Enable charts for your project
 * From within the Charts UI, press the green down arrow next to `Add Dashboard` and choose `Import Dashboard`
 * Upload the `Charts\ MongoDBar - Dashboard.json`
+
+## Website
+* Open the Realm App that was imported earlier
+  * Go to `Third Party Services`
+    * Select the `mongodbar` service
+      * Select the `autocomplete` webhook
+        * Click on the `Settings` tab and scroll down to the `Webhook URL` and copy it
+        * Open the file `TODO/autocomplete.js` and edit line 20 to use the URL that was copied
+      * Select the `getFieldValues` function
+        * Click on the `Settings` tab and scroll down to the `Webhook URL` and copy it
+        * Open the file `TODO/charts.js` and edit line 4 to use the URL that was copied, and add `?filterField=";` to the end of the line so that it reads `...incoming_webhook/getFieldValues?filterField=";`
+* Import the realm app again to the same App ID and overwrite any existing functions
+* Go back to the Realm App and navigate to `Hosting`
+  * Copy the listed URL and open it in your browser to view the dashboard / website
+* All done!

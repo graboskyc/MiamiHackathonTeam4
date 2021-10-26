@@ -16,124 +16,46 @@ To handle this, Team 4 has built the "MongoDBar" application. It allows for IOT-
 * HTML5/CSS/JS dashboard to allow for searching liquor inventory with **Atlas Search**
 * **Realm Hosting** to store the dashboards
 
-# Data
-## Data models
-### `Inventory` Sample Document
-
-```
-{
-  "_id": {
-    "$oid": "61780b85d28f5b8f68cb785b"
-  },
-  "Brand Label Serial Number": "5114712",
-  "Brand Label Name": "TULLAMORE DEW 12 YR SPECIAL RES 80PF",
-  "License Type Code": "652",
-  "License Class Code": "2",
-  "License Class Description": "WHISKEY",
-  "Product Description": "IRISH WHISKY",
-  "Wholesaler License Serial Number": "1263546",
-  "Wholesaler Name": "WILLIAM GRANT & SONS INC",
-  "Domestic (D) or Imported (I)": "I",
-  "Brand Label Expiration Date": "2019-09-30T00:00:00.000",
-  "volumeInOz": {
-    "$numberDouble": "23.67"
-  },
-  "location": {
-    "barName": "MooMba Beach Bar & Restaurant",
-    "geo": [
-      {
-        "$numberDouble": "-70.05551129837323"
-      },
-      {
-        "$numberDouble": "12.58224079198876"
-      }
-    ]
-  }
-}
-```
-
-### `Pours` Sample Document (Time Series)
-```
-{
-  "pourTime": {
-    "$date": {
-      "$numberLong": "1633132583667"
-    }
-  },
-  "bottle": {
-    "Brand Label Name": "ARISTOCRAT LIQUEURS 30PF",
-    "bottleId": {
-      "$numberInt": "1092"
-    }
-  },
-  "ouncesRemaing": {
-    "$numberInt": "8"
-  },
-  "pourOunces": {
-    "$numberInt": "2"
-  },
-  "_id": {
-    "$oid": "61783ad464c23a581ed7ef4f"
-  }
-}
-```
-
-### `BottleReadingTemp` Realm Object
-```
-public class BottleReadingTemp : RealmObject
-        {
-            [PrimaryKey]
-            [MapTo("_id")]
-            public ObjectId Id { get; set; } = ObjectId.GenerateNewId();
-
-            [MapTo("bottleId")]
-            public string BottleId { get; set; }
-            [MapTo("bottleContents")]
-            public string Contents { get; set; }
-            [MapTo("pourSize")]
-            public int Pour { get; set; }
-            [MapTo("remaining")]
-            public int Remaining { get; set; }
-        }
-```
-
-### `BottleReadingTemp` Sample Document
-```
-{
-  "_id": {
-    "$oid": "6178357fd660e7559ec86e52"
-  },
-  "_pk": "user=6178141d68f275f84ecafe2c",
-  "bottleContents": "TULLAMORE DEW 12 YR SPECIAL RES 80PF",
-  "bottleId": "8001",
-  "pourSize": {
-    "$numberLong": "1"
-  },
-  "remaining": {
-    "$numberLong": "2"
-  }
-}
-```
-
-## Data flow
-![](Assets/UML.png)
+# Data Models and Data Flow
+[See details here](Assets/DataModel.md)
 
 # Set up
 ## Prerequisites
 
 * MongoDB Atlas Account
-* IP Whitelist configured for API access
-* Some knowledge of Realm and Charts
+* Atlas Cluster Deployed (named Team4)
+* You have access to a server running Linux and Docker with this repo cloned onto it
+* Charts enabled
 
+## Atlas 
+* import lsdjgkljsdklglksdgjlksdgjklsg into `mongodbar.inventory` and `mongodbbar.pours`
 
-## Getting Started
+## Realm
+* Install the Realm-CLI
+* Generate a Realm-CLI API Key
+* Do a Realm-CLI import on the `RealmExport` directory (note that if cluster name is not `Team4` you need to edit `RealmExport/data_sources/mongodb-atlas/config.json` and change `config.clusterName`)
+* This will create a new realm app
+* Confirm that hosting is enabled in Realm portal
+* Confirm API key authentication is enabled. 
+* Generate a authentication API key and save it for use in the next section
+* Confirm sync is running
 
-After you configure your Atlas account set up your database by downloading inventory.json and put them into a database called 'mongodbar' and collection called 'inventory'.  Then add your IOT data using pours.json into the database called 'mongodbar' and collection called 'pours'......
+## Containers
+* Copy `sample.env` in both the `Broker` and `Generator` directories to `.env` respectively 
+* Edit each file and fill in the Realm API key, Realm App ID in the Broker and the IP address of the machine running Docker in the Generator
+* Run the `build.sh` script in the Broker first and check log output to confirm it connected
+* Once successfully running `build.sh` in the Generator directory
+* Confirm output logs that it is writing readings every ~30 seconds
+* You should see 4 containers running representing a MQTT broker and 3 simulated IOT liquor pouring sensors
 
-ACTION AND DELETE : upload inventory.json and pours.json
+## Website
+* Ensure hosting is enabled
+* Change the App ID in `sdjgsdjgkldsgkljg`
+* Upload the `sdkjklsdjkljsgdkl` folder to Realm Hosting
 
+## Search
 
-### Set up Search
+dfjhkldfjhlkdfhkljfdhkl
 
 (
 You need a search index for numerous reasons:
@@ -143,12 +65,6 @@ You need a search index for numerous reasons:
 ).....
 
 
-### Set up Trigger
+## Set up Charts
 
-.......
-
-
-### Set up Charts
-
-
-.......
+dfdfkhjdlfkhjkldfjh

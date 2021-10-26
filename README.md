@@ -95,5 +95,6 @@ You need a search index for numerous reasons:
 
 
 ## Set up Charts
-
-dfdfkhjdlfkhjkldfjh
+* Enable charts for your project
+* From within the Charts UI, press the green down arrow next to `Add Dashboard` and choose `Import Dashboard`
+* Upload the `Charts\ MongoDBar - Dashboard.json`

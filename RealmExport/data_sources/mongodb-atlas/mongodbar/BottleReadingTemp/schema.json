@@ -1,0 +1,30 @@
+{
+    "bsonType": "object",
+    "properties": {
+        "_id": {
+            "bsonType": "objectId"
+        },
+        "_pk": {
+            "bsonType": "string"
+        },
+        "bottleContents": {
+            "bsonType": "string"
+        },
+        "bottleId": {
+            "bsonType": "string"
+        },
+        "pourSize": {
+            "bsonType": "long"
+        },
+        "remaining": {
+            "bsonType": "long"
+        }
+    },
+    "required": [
+        "_id",
+        "_pk",
+        "pourSize",
+        "remaining"
+    ],
+    "title": "BottleReadingTemp"
+}

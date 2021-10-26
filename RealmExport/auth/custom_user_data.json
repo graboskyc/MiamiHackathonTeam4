@@ -1,0 +1,7 @@
+{
+    "enabled": true,
+    "mongo_service_name": "mongodb-atlas",
+    "database_name": "mongodbar",
+    "collection_name": "profile",
+    "user_id_field": "userId"
+}
